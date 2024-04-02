@@ -1,0 +1,32 @@
+<p>edit-team works!</p>
+<div *ngIf="team">
+    <form #addTeam="ngForm" (ngSubmit)="onSubmit(addTeam)">
+        <p>Editing Team {{team.number}}</p>
+        <p>Team Name: </p>
+        <input type="text" name="teamName" [(ngModel)]="team.name" />
+        <p>Average Score: </p>
+        <input type="number" name="teamScore" [(ngModel)]="team.averageScore" />
+        <p>Average Auto Score: </p>
+        <input type="number" name="autoScore" [(ngModel)]="team.autoScore" />
+        <p>Average TeleOp Score: </p>
+        <input type="number" name="teleOpScore" [(ngModel)]="team.teleOpScore" />
+        <p>Average End-Game Score: </p>
+        <input type="number" name="endGameScore" [(ngModel)]="team.endGameScore" />
+        <p>Purple Pixel Placement: </p>
+        <select name="purplePixel" [(ngModel)]="team.purplePlacement">
+            <option [value]="0">Correct Placement</option>
+            <option [value]="1">Backdrop</option>
+            <option [value]="2">Backstage</option>
+            <option>None</option>
+        </select>
+        <p>Yellow Pixel Placement: </p>
+        <select name="yellowPixel" [(ngModel)]="team.yellowPlacement">
+            <option [value]="0">Correct Placement</option>
+            <option [value]="1">Backdrop</option>
+            <option [value]="2">Backstage</option>
+            <option>None</option>
+        </select>
+        <br /><br />
+        <input type="submit" value="submit">
+    </form>
+</div>

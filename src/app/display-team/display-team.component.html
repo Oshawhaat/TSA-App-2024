@@ -1,0 +1,8 @@
+<p>display-team works!</p>
+
+<p>Team Number: {{team?.number}}</p>
+<p>Team Name: {{team?.name??'Undefined'}}</p>
+<p>Average Score: {{team?.averageScore??'Undefined'}}</p>
+<p>Can Hang: {{team?.canHang??'Undefined'}}</p>
+<br />
+<a [routerLink]="['edit']">Edit Team</a>

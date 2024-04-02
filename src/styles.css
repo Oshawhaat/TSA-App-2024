@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: rgb(163, 163, 163);
+}
+
+/* a {
+    color:rgb(0, 230, 230);
+}
+
+a :hover {
+    color:aqua;
+}
+
+a :active {
+    color:rgb(0, 224, 224);
+} */

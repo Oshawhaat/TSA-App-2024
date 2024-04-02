@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+}
+
+table th {
+    text-align: left;
+}
+
+table thead :last-child,
+table tr :last-child
+{
+    text-align: right;
+}
