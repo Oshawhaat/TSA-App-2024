@@ -2,7 +2,7 @@ import { ObjectDetection, PixelPlacement, Team } from '../app/team'
 
 export const CyberPirates13737: Team = {
     number: 13737,
-    name: "BeltonCyberPirates",
+    name: "Belton Cyber Pirates",
     driveInfo: "Mecanum drive, field centric, very fast",
     armInfo: "Pivoting linear slide capable of reaching the third set line",
     intakeInfo: "Double claw able to precisely score and move pixels",
