@@ -1,31 +1,97 @@
 
 <div *ngIf="team">
     <form #addTeam="ngForm" (ngSubmit)="onSubmit(addTeam)">
-        <p>Editing Team {{team.number}}</p>
+        <h2>Editing Team {{team.number}}</h2>
+
         <p>Team Name: </p>
         <input type="text" name="teamName" [(ngModel)]="team.name" />
-        <p>Average Score: </p>
-        <input type="number" name="teamScore" [(ngModel)]="team.averageScore" />
-        <p>Average Auto Score: </p>
-        <input type="number" name="autoScore" [(ngModel)]="team.autoScore" />
-        <p>Average TeleOp Score: </p>
-        <input type="number" name="teleOpScore" [(ngModel)]="team.teleOpScore" />
-        <p>Average End-Game Score: </p>
-        <input type="number" name="endGameScore" [(ngModel)]="team.endGameScore" />
+
+
+        <br /><br />
+        <h2>Auto</h2>
+
+        <p>Team Prop </p>
+        <input type="checkbox" name="teamProp" [(ngModel)]="team.teamProp" />
+
+        <p>Object Detection: </p>
+        <select name="objectDetection" [(ngModel)]="team.objectDetection">
+            <option [value]="0">Reliable</option>
+            <option [value]="1">Mostly Reliable</option>
+            <option [value]="2">Unreliable</option>
+            <option>None</option>
+        </select>
+
         <p>Purple Pixel Placement: </p>
         <select name="purplePixel" [(ngModel)]="team.purplePlacement">
             <option [value]="0">Correct Placement</option>
-            <option [value]="1">Backdrop</option>
-            <option [value]="2">Backstage</option>
+            <option [value]="1">Sometimes Correct Placement</option>
+            <option [value]="2">Backdrop</option>
+            <option [value]="3">Backstage</option>
             <option>None</option>
         </select>
+
         <p>Yellow Pixel Placement: </p>
         <select name="yellowPixel" [(ngModel)]="team.yellowPlacement">
             <option [value]="0">Correct Placement</option>
-            <option [value]="1">Backdrop</option>
-            <option [value]="2">Backstage</option>
+            <option [value]="1">Sometimes Correct Placement</option>
+            <option [value]="2">Backdrop</option>
+            <option [value]="3">Backstage</option>
             <option>None</option>
         </select>
+
+        <p>White Pixels Scored In Auto</p>
+        <input type="number" name="whiteInAuto" [(ngModel)]="team.autoWhites" />
+
+        <p>Average Auto Score: </p>
+        <input type="number" name="autoScore" [(ngModel)]="team.autoScore" />
+
+        <p>Additional Auto Notes: </p>
+        <input type="text" name="autoNotes" [(ngModel)]="team.autoNotes" />
+
+
+        <br /><br />
+        <h2>Teleop</h2>
+
+        <p>Average Mosaics Scored: </p>
+        <input type="number" name="mosaics" [(ngModel)]="team.mosaicsScored" />
+
+        <p>Average Set Lines Reached: </p>
+        <input type="number" name="setLines" [(ngModel)]="team.setLinesReached" />
+
+        <p>Average Pixels Scored: </p>
+        <input type="number" name="pixelsScored" [(ngModel)]="team.pixelsScored" />
+
+        <p>Average TeleOp Score: </p>
+        <input type="number" name="teleOpScore" [(ngModel)]="team.teleOpScore" />
+
+        <p>Additional Teleop Notes: </p>
+        <input type="text" name="teleopNotes" [(ngModel)]="team.teleopNotes"/>
+
+
+        <br /><br />
+        <h2>End Game</h2>
+
+        <p>Can Hang: </p>
+        <input type="checkbox" name="hanging" [(ngModel)]="team.canHang" />
+
+        <p>Time to Hang: </p>
+        <input type="number" name="hangTime" [(ngModel)]="team.hangTime" />
+
+        <p>Average Drone Score: </p>
+        <input type="number" name="droneScore" [(ngModel)]="team.droneScore" />
+
+        <p>Average End-Game Score: </p>
+        <input type="number" name="endGameScore" [(ngModel)]="team.endGameScore" />
+
+        <p>Additional End Game Notes: </p>
+        <input type="text" name="teleopNotes" [(ngModel)]="team.endGameNotes" />
+
+
+        <br /><br />
+
+        <p>Average Score: </p>
+        <input type="number" name="teamScore" [(ngModel)]="team.averageScore" />
+
         <br /><br />
         <input type="submit" value="submit">
     </form>
