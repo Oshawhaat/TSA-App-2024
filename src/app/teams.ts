@@ -1,0 +1,27 @@
+import { ObjectDetection, PixelPlacement, Team } from '../app/team'
+
+export const CyberPirates13737: Team = {
+    number: 13737,
+    name: "BeltonCyberPirates",
+    driveInfo: "Mecanum drive, field centric, very fast",
+    armInfo: "Pivoting linear slide capable of reaching the third set line",
+    intakeInfo: "Double claw able to precisely score and move pixels",
+    teamProp: true,
+    objectDetection: ObjectDetection.reliable,
+    purplePlacement: PixelPlacement.correctPlacement,
+    yellowPlacement: PixelPlacement.correctPlacement,
+    autoWhites: 0,
+    autoScore: 45,
+    autoNotes: "Does not score yellow pixel on far side",
+    mosaicsScored: 2,
+    setLinesReached: 1,
+    pixelsScored: 10,
+    teleOpScore: 60,
+    teleopNotes: "Usually focus on creating mosaics, exclusively grab from human player",
+    canHang:  true,
+    hangTime: 2,
+    droneScore: 20,
+    endGameScore: 40,
+    endGameNotes: "Very fast hanging, unreliable drone",
+    averageScore: 145,
+}
