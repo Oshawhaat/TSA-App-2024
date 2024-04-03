@@ -36,14 +36,6 @@ export enum ObjectDetection {
     unreliable = 2,
 }
 
-export enum DriveType {
-    mecanum = 0,
-    tank = 1,
-    xDrive = 2,
-    hDrive = 3,
-    other = 4
-}
-
 export enum PixelPlacement {
     correctPlacement = 0,
     sometimesCorrect = 1,
