@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Team } from '../team';
+import { Team, ObjectDetection, PixelPlacement } from '../team';
 import { TeamRepoService } from '../team-repo.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 
@@ -11,9 +11,12 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
   styleUrl: './display-team.component.css'
 })
 export class DisplayTeamComponent implements OnInit {
-
+  
   team?: Team = undefined;
   teamNumber: number = 0;
+  
+  get ObjectDetection() {return ObjectDetection}
+  get PixelPlacement() {return PixelPlacement}
   
   constructor(private teamRepo: TeamRepoService, private route: ActivatedRoute) {
     route.params.subscribe(val => {
