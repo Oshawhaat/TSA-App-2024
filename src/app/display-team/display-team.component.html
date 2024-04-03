@@ -1,7 +1,88 @@
 
 <p>Team Number: {{team?.number}}</p>
 <p>Team Name: {{team?.name??'Undefined'}}</p>
-<p>Average Score: {{team?.averageScore??'Undefined'}}</p>
-<p>Can Hang: {{team?.canHang??'Undefined'}}</p>
+
 <br />
+<h2>Robot Info</h2>
+
+<p>Drive Info:</p>
+<p>{{team?.driveInfo}}</p>
+
+<p>Arm Info:</p>
+<p>{{team?.armInfo}}</p>
+
+<p>Intake Info:</p>
+<p>{{team?.intakeInfo}}</p>
+
+
+<br />
+<h2>Auto</h2>
+
+<p>Team Prop: {{team?.teamProp}} </p>
+
+<p>Object Detection: {{
+    team?.objectDetection == 0 ? "Reliable" :
+    team?.objectDetection == 1 ? "Moslty Reliable" :
+    team?.objectDetection == 2 ? "Not Reliable" :
+    "None"
+    }}</p>
+
+
+<p>Purple Pixel Placement: {{
+    team?.purplePlacement == 0 ? "Correct Placement" :
+    team?.purplePlacement == 1 ? "Sometimes Correct Placement" :
+    team?.purplePlacement == 2 ? "Backdrop" :
+    team?.purplePlacement == 3 ? "Backstage" :
+    "None"
+    }}</p>
+
+<p>Yellow Pixel Placement: {{
+    team?.yellowPlacement == 0 ? "Correct Placement" :
+    team?.yellowPlacement == 1 ? "Sometimes Correct Placement" :
+    team?.yellowPlacement == 2 ? "Backdrop" :
+    team?.yellowPlacement == 3 ? "Backstage" :
+    "None"
+    }}</p>
+
+<p>White Pixels Scored In Auto: {{team?.autoWhites}}</p>
+
+<p>Average Auto Score: {{team?.autoScore}}</p>
+
+<p>Additional Auto Notes: {{team?.autoNotes}}</p>
+
+
+<br /><br />
+<h2>Teleop</h2>
+
+<p>Average Mosaics Scored: {{team?.mosaicsScored}}</p>
+
+<p>Average Set Lines Reached: {{team?.setLinesReached}}</p>
+
+<p>Average Pixels Scored: {{team?.pixelsScored}}</p>
+
+<p>Average TeleOp Score: {{team?.teleOpScore}}</p>
+
+<p>Additional Teleop Notes: {{team?.teleopNotes}}</p>
+
+
+<br /><br />
+<h2>End Game</h2>
+
+<p>Can Hang: {{team?.canHang}}</p>
+
+<p>Time to Hang: {{team?.hangTime}}</p>
+
+<p>Average Drone Score: {{team?.droneScore}}</p>
+
+<p>Average End-Game Score: {{team?.endGameScore}}</p>
+
+<p>Additional End Game Notes: {{team?.endGameNotes}}</p>
+
+
+<br />
+
+<p>Average Score: {{team?.averageScore}}</p>
+
+<br />
+
 <a [routerLink]="['edit']">Edit Team</a>
