@@ -1,0 +1,157 @@
+<h2>Team Suggestions</h2>
+<br />
+<div class="container">
+    <div class="row">
+
+      <div class="col">
+        <h4>Highest Scores</h4>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let team of teams | orderBy:'averageScore':false | slice:0:10; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td><a [routerLink]="['/team', team.number]">{{ team.number }}</a></td>
+                <td>{{team.name}}</td>
+                <td>{{team.averageScore}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <div class="col">
+        <h4>Best Autos</h4>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Auto Score</th>
+                <th scope="col">Object Detection</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let team of teams | orderBy:'autoScore':false | slice:0:10; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td><a [routerLink]="['/team', team.number]">{{ team.number }}</a></td>
+                <td>{{team.name}}</td>
+                <td>{{team.autoScore}}</td>
+                <td>{{team.objectDetection}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+        
+        <div class="col">
+          <h4>Best Teleops</h4>
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Teleop Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let team of teams | orderBy:'teleOpScore':false | slice:0:10; let i=index">
+                  <th scope="row">{{i+1}}</th>
+                  <td><a [routerLink]="['/team', team.number]">{{ team.number }}</a></td>
+                  <td>{{team.name}}</td>
+                  <td>{{team.teleOpScore}}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+  
+        <div class="col">
+          <h4>Best End-Games</h4>
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">End-Game Score</th>
+                  <th scope="col">Drone Score</th>
+                  <th scope="col">Hang Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let team of teams | orderBy:'endGameScore':false | slice:0:10; let i=index">
+                  <th scope="row">{{i+1}}</th>
+                  <td><a [routerLink]="['/team', team.number]">{{ team.number }}</a></td>
+                  <td>{{team.name}}</td>
+                  <td>{{team.endGameScore}}</td>
+                  <td>{{team.droneScore}}</td>
+                  <td>{{team.hangTime ? team.hangTime + " seconds" : ""}}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+  
+      </div>
+      <div class="row">
+          
+          <div class="col">
+            <h4>Best Teams to Hang With</h4>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Can Hang</th>
+                    <th scope="col">Hang Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let team of teamsCanHang() | orderBy:'hangTime':false | slice:0:10; let i=index">
+                    <th scope="row">{{i+1}}</th>
+                    <td><a [routerLink]="['/team', team.number]">{{ team.number }}</a></td>
+                    <td>{{team.name}}</td>
+                    <td>{{team.canHang}}</td>
+                    <td>{{team.hangTime ? team.hangTime + " seconds" : ""}}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+    
+          <div class="col">
+            <h4>Most Artistic</h4>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Mosaics Scored</th>
+                    <th scope="col">Set-Lines Hit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let team of teams | orderBy:'endGameScore':false | slice:0:10; let i=index">
+                    <th scope="row">{{i+1}}</th>
+                    <td><a [routerLink]="['/team', team.number]">{{ team.number }}</a></td>
+                    <td>{{team.name}}</td>
+                    <td>{{team.mosaicsScored}}</td>
+                    <td>{{team.setLinesReached}}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+    
+        </div>
+</div>

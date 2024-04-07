@@ -36,19 +36,19 @@
 
         <p>Purple Pixel Placement: </p>
         <select name="purplePixel" [(ngModel)]="team.purplePlacement">
-            <option [value]="0">Correct Placement</option>
-            <option [value]="1">Sometimes Correct Placement</option>
-            <option [value]="2">Backdrop</option>
-            <option [value]="3">Backstage</option>
+            <option [value]="PixelPlacement.correctPlacement">Correct Placement</option>
+            <option [value]="PixelPlacement.sometimesCorrect">Sometimes Correct Placement</option>
+            <option [value]="PixelPlacement.backDrop">Backdrop</option>
+            <option [value]="PixelPlacement.backStage">Backstage</option>
             <option>None</option>
         </select>
 
         <p>Yellow Pixel Placement: </p>
         <select name="yellowPixel" [(ngModel)]="team.yellowPlacement">
-            <option [value]="0">Correct Placement</option>
-            <option [value]="1">Sometimes Correct Placement</option>
-            <option [value]="2">Backdrop</option>
-            <option [value]="3">Backstage</option>
+            <option [value]="PixelPlacement.correctPlacement">Correct Placement</option>
+            <option [value]="PixelPlacement.sometimesCorrect">Sometimes Correct Placement</option>
+            <option [value]="PixelPlacement.backDrop">Backdrop</option>
+            <option [value]="PixelPlacement.backStage">Backstage</option>
             <option>None</option>
         </select>
 

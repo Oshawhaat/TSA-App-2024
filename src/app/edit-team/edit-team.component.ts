@@ -16,6 +16,7 @@ export class EditTeamComponent {
   
   team?: Team = undefined;
   public ObjectDetection = ObjectDetection;
+  public PixelPlacement = PixelPlacement;
   
   constructor(private teamRepo: TeamRepoService, private route: ActivatedRoute) {
     route.params.subscribe(val => {
