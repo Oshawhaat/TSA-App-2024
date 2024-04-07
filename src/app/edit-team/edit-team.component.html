@@ -28,9 +28,9 @@
 
         <p>Object Detection: </p>
         <select name="objectDetection" [(ngModel)]="team.objectDetection">
-            <option [value]="0">Reliable</option>
-            <option [value]="1">Mostly Reliable</option>
-            <option [value]="2">Unreliable</option>
+            <option [value]="ObjectDetection.reliable">Reliable</option>
+            <option [value]="ObjectDetection.mostlyReliable">Mostly Reliable</option>
+            <option [value]="ObjectDetection.unreliable">Unreliable</option>
             <option>None</option>
         </select>
 

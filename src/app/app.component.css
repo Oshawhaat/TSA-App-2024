@@ -1,11 +1,32 @@
 .page {
-    border: solid green 2px;
+    border: solid rgb(234, 0, 255) 2px;
     border-radius: 5px;
     margin-top: 15px;
     padding: 20px;
-    background-color: aliceblue;
+    background-color: rgb(244, 250, 255);
+    min-height: 300px;
+}
+
+.menu {
+    font-variant: small-caps;
 }
 
 .menu a {
     font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-right: 30px;
+}
+
+footer {
+    text-align: center;
+    margin: 30px;
+    color: rgb(157, 0, 255);
+}
+
+footer .fa-github {
+    font-size: 1.3em;
 }

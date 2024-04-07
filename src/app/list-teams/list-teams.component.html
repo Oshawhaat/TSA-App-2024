@@ -1,13 +1,22 @@
 
-<table>
+<div class="text-right">
+    <select [(ngModel)]="selectedTeamKey">
+        <option value="">none</option>
+        <option *ngFor="let key of teamKeys" [ngValue]="key">{{key??"None"}}</option>
+    </select>
+</div>
+
+<table class="table team-list">
     <thead>
-        <th>Team Number</th>
-        <th>Team Name</th>
-        <th>Average Score</th>
+        <th (click)="sortBy('number')">Team Number <i [ngClass]="headerClass('number')" class="fa-solid fa-fw"></i></th> 
+        <th (click)="sortBy('name')">Team Name <i [ngClass]="headerClass('name')" class="fa-solid fa-fw"></i></th>
+        <th (click)="sortBy('averageScore')">Average Score <i [ngClass]="headerClass('averageScore')" class="fa-solid fa-fw"></i></th>
+        <th (click)="sortBy('autoScore')">Auto Score <i [ngClass]="headerClass('autoScore')" class="fa-solid fa-fw"></i></th>
+        <th *ngIf="selectedTeamKey" (click)="sortBy(selectedTeamKey)">{{selectedTeamKey}} <i [ngClass]="headerClass(selectedTeamKey)" class="fa-solid fa-fw"></i></th>
         <th></th>
     </thead>
     <tbody>
-        <tr *ngFor="let team of teams | orderBy:sortFn">
+        <tr *ngFor="let team of teams | orderBy: sortCollumn: sortAscending">
             <td>
                 <a [routerLink]="['/team', team.number]">{{ team.number }}</a>
             </td>
@@ -16,6 +25,12 @@
             </td>
             <td>
                 {{ team.averageScore }}
+            </td>
+            <td>
+                {{ team.autoScore }}
+            </td>
+            <td>
+                {{ team[selectedTeamKey] }}
             </td>
             <td>         
                 <a [routerLink]="['team', team.number, 'edit']">Edit Team</a>

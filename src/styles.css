@@ -1,15 +1,23 @@
 body {
-    background-color: rgb(163, 163, 163);
+    background-color: rgb(0, 0, 0);
 }
 
-/* a {
-    color:rgb(0, 230, 230);
+a, .title {
+    color:rgb(182, 86, 255);
 }
 
 a :hover {
-    color:aqua;
+    color:rgb(0, 150, 255);
 }
 
-a :active {
-    color:rgb(0, 224, 224);
-} */
+.display-none {
+    display: none;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.text-right {
+    text-align: right;
+}

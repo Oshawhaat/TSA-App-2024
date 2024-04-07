@@ -31,14 +31,27 @@ export interface Team {
 }
 
 export enum ObjectDetection {
-    reliable = 0,
-    mostlyReliable = 1,
-    unreliable = 2,
+    reliable = 'Reliable',
+    mostlyReliable = "Mostly Reliable",
+    unreliable = "Unreliable",
 }
 
+export const ObjectDetectionToString: Record<ObjectDetection, string> = {
+    [ObjectDetection.reliable]: "Reliable",
+    [ObjectDetection.mostlyReliable]: "Mostly Reliable",
+    [ObjectDetection.unreliable]: "Unreliable",
+};
+
 export enum PixelPlacement {
-    correctPlacement = 0,
-    sometimesCorrect = 1,
-    backDrop = 2,
-    backStage = 3,
+    correctPlacement = "Correct Placement",
+    sometimesCorrect = "Sometimes Correct Placement",
+    backDrop = "Backdrop",
+    backStage = "Backstage",
 }
+
+export const PixelPlacementToString: Record<PixelPlacement, string> = {
+    [PixelPlacement.correctPlacement]: "Correct Placement",
+    [PixelPlacement.sometimesCorrect]: "Sometimes Correct Placement",
+    [PixelPlacement.backDrop]: "Backdrop",
+    [PixelPlacement.backStage]:"Backstage",
+};

@@ -21,27 +21,16 @@
 <p>Team Prop: {{team?.teamProp}} </p>
 
 <p>Object Detection: {{
-    team?.objectDetection == 0 ? "Reliable" :
-    team?.objectDetection == 1 ? "Moslty Reliable" :
-    team?.objectDetection == 2 ? "Not Reliable" :
-    "None"
+    team?.objectDetection??"None"
     }}</p>
 
 
 <p>Purple Pixel Placement: {{
-    team?.purplePlacement == 0 ? "Correct Placement" :
-    team?.purplePlacement == 1 ? "Sometimes Correct Placement" :
-    team?.purplePlacement == 2 ? "Backdrop" :
-    team?.purplePlacement == 3 ? "Backstage" :
-    "None"
+    team?.purplePlacement??"None"
     }}</p>
 
 <p>Yellow Pixel Placement: {{
-    team?.yellowPlacement == 0 ? "Correct Placement" :
-    team?.yellowPlacement == 1 ? "Sometimes Correct Placement" :
-    team?.yellowPlacement == 2 ? "Backdrop" :
-    team?.yellowPlacement == 3 ? "Backstage" :
-    "None"
+    team?.yellowPlacement??"None"
     }}</p>
 
 <p>White Pixels Scored In Auto: {{team?.autoWhites}}</p>

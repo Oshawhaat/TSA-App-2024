@@ -1,13 +1,24 @@
 table {
     width: 100%;
+    color: purple;
 }
 
 table th {
     text-align: left;
+    color: rgb(222, 185, 0);
 }
 
 table thead :last-child,
 table tr :last-child
 {
     text-align: right;
+}
+
+.team-list tr td {
+    background: none !important;
+}
+
+.team-list th i {
+    background: none !important;
+    display: inline;
 }
