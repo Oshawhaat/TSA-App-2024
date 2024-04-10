@@ -118,7 +118,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let team of teamsCanHang() | orderBy:'hangTime':false | slice:0:10; let i=index">
+                  <tr *ngFor="let team of teamsCanHang() | orderBy:'hangTime':true | slice:0:10; let i=index">
                     <th scope="row">{{i+1}}</th>
                     <td><a [routerLink]="['/team', team.number]">{{ team.number }}</a></td>
                     <td>{{team.name}}</td>
@@ -142,7 +142,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let team of teams | orderBy:'endGameScore':false | slice:0:10; let i=index">
+                  <tr *ngFor="let team of teams | orderBy:'mosaicsScored':false | slice:0:10; let i=index">
                     <th scope="row">{{i+1}}</th>
                     <td><a [routerLink]="['/team', team.number]">{{ team.number }}</a></td>
                     <td>{{team.name}}</td>
