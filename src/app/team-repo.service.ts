@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Team } from './team';
-import { CyberPirates13737 } from './teams'
+import { CyberPirates13737, CyberPirates13399 } from './teams'
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class TeamRepoService {
 
   readonly localStorageKey: string = 'teams';
   
   teams: Team[] = [
     CyberPirates13737,
+    CyberPirates13399,
   ];
 
   constructor() {
