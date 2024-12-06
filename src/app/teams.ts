@@ -19,25 +19,36 @@ export const CyberPirates13737: Team = {
     canScoreHighBasket: true,
     
     // Auto
-    leftStartingObject: ScoringObject.sample,
-    leftSpecimenScored: 0,
-    leftSamplesScoredNetZone: 0,
+    leftStartingObject: ScoringObject.specimen,
+    leftSpecimenScored: 1,
+    leftSamplesScoredNetZone: 1,
     leftSamplesScoredLowBasket: 0,
     leftSamplesScoredHighBasket: 0,
-    leftParkingMethod: ParkingMethod.observationZone,
-    leftAutoScore: 3,
-    leftAutoNotes: "No side preference, both parking autos, left auto waits 20 secs before parking in observation zone",
+    //leftParkingMethod: ,
+    leftAutoScore: 36,
+    leftAutoNotes: "Scores specimen on high bar first, then grabs first yellow block and scores in high basket. End in net zone.",
+    leftAutoParkAscent: false,
+
+    // Auto Right
+    rightStartingObject: ScoringObject.specimen,
+    rightSpecimenScored: 2,
+    rightSamplesScoredNetZone: 0,
+    rightSamplesScoredLowBasket: 0,
+    rightSamplesScoredHighBasket: 0,
+    //rightParkingMethod?: ,
+    rightAutoScore: 40,
+    rightAutoNotes: "Scores first specimen on high bar then pushes first blue block into human player, then grabs specimen and scores on high bar",
+    rightAutoParkAscent: false,
 
     // Teleop
-    scoringPreference: ScoringMethod.highBasket,
-    timeToScoreSample: 20,
+    scoringPreference: ScoringMethod.highBar,
+    timeToScoreSample: 10,
     //timeToScoreSpecimen?: ,
     teleopScore: 40,
-    teleopNotes: "Wrist is really difficult to get to move, makes scoring difficult and relatively slow",
-
+    teleopNotes: "Somewhat difficult to grab specimen with their bot but they are good at it",
     // End game
     canLevelOneAscent: true,
-    levelOneAscentTime: 1,
+    levelOneAscentTime: 3,
     canLevelTwoAscent: false,
     //levelTwoAscentTime?: ,
     canLevelThreeAscent: false,
@@ -46,5 +57,5 @@ export const CyberPirates13737: Team = {
     endGameNotes: "Keep scoring until 3-5 seconds left then touch bar for level 1 ascent",
 
     // Overall
-    averageScore: 50,
+    averageScore: 80,
 }
