@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TeamRepoService } from '../team-repo.service';
-import { Team } from '../team';
+import { Team } from '../IntoTheDeepTeam';
 import { OrderByPipe } from "../order-by.pipe";
 import { RouterModule } from '@angular/router';
 
@@ -17,18 +17,36 @@ export class ListTeamsComponent implements OnInit {
 
   teams: Team[] = [];
   teamKeys: string[] = [
-    'objectDetection',
-    'purplePlacement',
-    'yellowPlacement',
-    'autoWhites',
-    'mosaicsScored',
-    'setLinesReached',
-    'pixelsScored',
-    'teleOpScore',
-    'canHang',
-    'hangTime',
-    'droneScore',
-    'endGameScore',
+    'driveSpeed',
+    'armSpeed',
+
+    // Scoring
+    'canScoreLowBar',
+    'canScoreHighBar',
+    'canScoreLowBasket',
+    'canScoreHighBasket',
+    
+    // Auto
+    'startingObject',
+    'specimenScored',
+    'samplesScoredNetZone',
+    'samplesScoredLowBasket',
+    'samplesScoredHighBasket',
+    'parkingMethod',
+
+    // Teleop
+    'scoringPreference',
+    'timeToScoreSample',
+    'timeToScoreSpecimen',
+    'teleopScore',
+
+    // End game
+    'canLevelOneAscent',
+    'levelOneAscentTime',
+    'canLevelTwoAscent',
+    'levelTwoAscentTime',
+    'canLevelThreeAscent',
+    'levelThreeAscentTime',
   ];
   selectedTeamKey: string = '';
   sortCollumn: string = "number";
@@ -50,7 +68,7 @@ export class ListTeamsComponent implements OnInit {
 
   headerClass(colName: string): string {
     if (colName !== this.sortCollumn)
-      return "fa-chevron-up hide"
-    return this.sortAscending ? "fa-chevron-up" : "fa-chevron-down"
+      return "fa-chevron-up hide";
+    return this.sortAscending ? "fa-chevron-up" : "fa-chevron-down";
   }
 }

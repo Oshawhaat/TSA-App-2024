@@ -6,6 +6,7 @@ import { DisplayTeamComponent } from "./display-team/display-team.component";
 import { ListTeamsComponent } from "./list-teams/list-teams.component";
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
     selector: 'app-root',
     standalone: true,

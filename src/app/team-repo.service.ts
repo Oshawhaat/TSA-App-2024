@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Team } from './team';
-import { CyberPirates13737, CyberPirates13399 } from './teams'
+import { Team } from './IntoTheDeepTeam';
+import { CyberPirates13737 } from './teams'
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +12,15 @@ export class TeamRepoService {
   
   teams: Team[] = [
     CyberPirates13737,
-    CyberPirates13399,
   ];
 
   constructor() {
     const json = localStorage.getItem(this.localStorageKey);
     if (!json) return;
-
-    this.teams = JSON.parse(json) as Team[];
+    
+    this.teams = [CyberPirates13737, ...(JSON.parse(json) as Team[]).filter((x) => {
+      return x.number !== 13737;
+    })];
   }
 
   getTeam(teamNumber: number): Team|undefined {
@@ -43,6 +44,13 @@ export class TeamRepoService {
 
     const json = JSON.stringify(this.teams);
     localStorage.setItem(this.localStorageKey, json);
+  }
+
+  hasTeamNumber(num: number) {
+    var teamNums = this.teams.map((x) => {
+      return x.number;
+    });
+    return teamNums.includes(num);
   }
 
   getTeams(): Team[] {

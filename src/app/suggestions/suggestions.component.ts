@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Team } from '../team';
+import { Team } from '../IntoTheDeepTeam';
 import { TeamRepoService } from '../team-repo.service';
 import { CommonModule, NgFor } from '@angular/common';
 import { OrderByPipe } from "../order-by.pipe";
@@ -22,7 +22,7 @@ export class SuggestionsComponent {
     this.teams = this.teamRepo.getTeams();
   }
 
-  teamsCanHang(): Team[] {
-    return this.teams.filter(x => x.canHang)
-  };
+  // teamsCanHang(): Team[] {
+  //   return this.teams.filter(x => x.canHang)
+  // };
 }

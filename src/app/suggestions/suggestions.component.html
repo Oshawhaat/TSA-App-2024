@@ -4,7 +4,7 @@
     <div class="row">
 
       <div class="col">
-        <h4>Highest Scores</h4>
+        <h3>Highest Scores</h3>
         <table class="table">
             <thead>
               <tr>
@@ -34,7 +34,7 @@
                 <th scope="col">Number</th>
                 <th scope="col">Name</th>
                 <th scope="col">Auto Score</th>
-                <th scope="col">Object Detection</th>
+                <!-- <th scope="col">Object Detection</th> -->
               </tr>
             </thead>
             <tbody>
@@ -43,7 +43,7 @@
                 <td><a [routerLink]="['/team', team.number]">{{ team.number }}</a></td>
                 <td>{{team.name}}</td>
                 <td>{{team.autoScore}}</td>
-                <td>{{team.objectDetection}}</td>
+                <!-- <td>{{team.objectDetection}}</td> -->
               </tr>
             </tbody>
           </table>
@@ -76,7 +76,7 @@
             </table>
         </div>
   
-        <div class="col">
+        <!-- <div class="col">
           <h4>Best End-Games</h4>
           <table class="table">
               <thead>
@@ -100,12 +100,12 @@
                 </tr>
               </tbody>
             </table>
-        </div>
+        </div> -->
   
       </div>
       <div class="row">
           
-          <div class="col">
+          <!-- <div class="col">
             <h4>Best Teams to Hang With</h4>
             <table class="table">
                 <thead>
@@ -127,9 +127,9 @@
                   </tr>
                 </tbody>
               </table>
-          </div>
+          </div> -->
     
-          <div class="col">
+          <!-- <div class="col">
             <h4>Most Artistic</h4>
             <table class="table">
                 <thead>
@@ -151,7 +151,7 @@
                   </tr>
                 </tbody>
               </table>
-          </div>
+          </div> -->
     
         </div>
 </div>

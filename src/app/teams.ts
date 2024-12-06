@@ -1,53 +1,50 @@
-import { ObjectDetection, PixelPlacement, Team } from '../app/team'
+import { Team, LowMedHigh, ScoringObject, ScoringMethod, ParkingMethod } from './IntoTheDeepTeam'
 
 export const CyberPirates13737: Team = {
+    // Team
     number: 13737,
     name: "Belton Cyber Pirates",
-    driveInfo: "Mecanum drive, field centric, very fast",
-    armInfo: "Pivoting linear slide capable of reaching the third set line",
-    intakeInfo: "Double claw able to precisely score and move pixels",
-    teamProp: true,
-    objectDetection: ObjectDetection.reliable,
-    purplePlacement: PixelPlacement.correctPlacement,
-    yellowPlacement: PixelPlacement.correctPlacement,
-    autoWhites: 0,
-    autoScore: 45,
-    autoNotes: "Does not score yellow pixel on far side",
-    mosaicsScored: 2,
-    setLinesReached: 1,
-    pixelsScored: 10,
-    teleOpScore: 60,
-    teleopNotes: "Usually focus on creating mosaics, exclusively grab from human player",
-    canHang: true,
-    hangTime: 2,
-    droneScore: 20,
-    endGameScore: 40,
-    endGameNotes: "Very fast hanging, unreliable drone",
-    averageScore: 145,
-}
 
-export const CyberPirates13399: Team = {
-    number: 13399,
-    name: "Belton Cyber Pirates",
-    driveInfo: "Mecanum drive, stanndard drive, fast",
-    armInfo: "Reverse double six bar able to reach the third set line",
-    intakeInfo: "Double claw able to precisely score pixels",
-    teamProp: true,
-    objectDetection: ObjectDetection.mostlyReliable,
-    purplePlacement: PixelPlacement.correctPlacement,
-    yellowPlacement: PixelPlacement.sometimesCorrect,
-    autoWhites: 0,
-    autoScore: 35,
-    autoNotes: "Does not score yellow pixel on far side",
-    mosaicsScored: 2,
-    setLinesReached: 1,
-    pixelsScored: 10,
-    teleOpScore: 60,
-    teleopNotes: "Usually focus on creating mosaics, mostly grab from human player",
-    canHang: true,
-    hangTime: 10,
-    droneScore: 20,
-    endGameScore: 40,
-    endGameNotes: "Somewhat quick hanging, unreliable drone",
-    averageScore: 135,
+    // Bot
+    driveInfo: "Basic Mecanum drive, field centric drive",
+    driveSpeed: LowMedHigh.medium,
+    armInfo: "Reverse double six bar with swing arm on the front",
+    armSpeed: LowMedHigh.medium,
+    intakeInfo: "Basic claw, angled fingers to grab the samples well",
+
+    // Scoring
+    canScoreLowBar: false,
+    canScoreHighBar: false,
+    canScoreLowBasket: true,
+    canScoreHighBasket: true,
+    
+    // Auto
+    leftStartingObject: ScoringObject.sample,
+    leftSpecimenScored: 0,
+    leftSamplesScoredNetZone: 0,
+    leftSamplesScoredLowBasket: 0,
+    leftSamplesScoredHighBasket: 0,
+    leftParkingMethod: ParkingMethod.observationZone,
+    leftAutoScore: 3,
+    leftAutoNotes: "No side preference, both parking autos, left auto waits 20 secs before parking in observation zone",
+
+    // Teleop
+    scoringPreference: ScoringMethod.highBasket,
+    timeToScoreSample: 20,
+    //timeToScoreSpecimen?: ,
+    teleopScore: 40,
+    teleopNotes: "Wrist is really difficult to get to move, makes scoring difficult and relatively slow",
+
+    // End game
+    canLevelOneAscent: true,
+    levelOneAscentTime: 1,
+    canLevelTwoAscent: false,
+    //levelTwoAscentTime?: ,
+    canLevelThreeAscent: false,
+    //levelThreeAscentTime?: ,
+    endGameScore: 3,
+    endGameNotes: "Keep scoring until 3-5 seconds left then touch bar for level 1 ascent",
+
+    // Overall
+    averageScore: 50,
 }

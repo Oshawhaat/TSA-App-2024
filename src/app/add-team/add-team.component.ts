@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Team } from '../team';
+import { Team } from '../IntoTheDeepTeam';
 import { TeamRepoService } from '../team-repo.service';
 import { FormsModule, NgForm } from '@angular/forms';
 

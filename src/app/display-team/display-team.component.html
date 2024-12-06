@@ -8,48 +8,81 @@
 <p>Drive Info:</p>
 <p>{{team?.driveInfo}}</p>
 
+<p>Drive Speed:</p>
+<p>{{team?.driveSpeed}}</p>
+
 <p>Arm Info:</p>
 <p>{{team?.armInfo}}</p>
+
+<p>Arm Speed:</p>
+<p>{{team?.armSpeed}}</p>
 
 <p>Intake Info:</p>
 <p>{{team?.intakeInfo}}</p>
 
 
 <br />
-<h2>Auto</h2>
+<h2>Scoring</h2>
 
-<p>Team Prop: {{team?.teamProp}} </p>
+<p>Can Score on Low Bar: {{team?.canScoreLowBar}} </p>
 
-<p>Object Detection: {{
-    team?.objectDetection??"None"
-    }}</p>
+<p>Can Score on High Bar: {{team?.canScoreHighBar}} </p>
+
+<p>Can Score on Low Basket: {{team?.canScoreLowBasket}} </p>
+
+<p>Can Score on High Basket: {{team?.canScoreHighBasket}} </p>
 
 
-<p>Purple Pixel Placement: {{
-    team?.purplePlacement??"None"
-    }}</p>
+<br />
+<h2>Auto Left</h2>
 
-<p>Yellow Pixel Placement: {{
-    team?.yellowPlacement??"None"
-    }}</p>
+<p>Starting Object: {{team?.leftStartingObject??"None"}} </p>
 
-<p>White Pixels Scored In Auto: {{team?.autoWhites}}</p>
+<p *ngIf="team?.leftStartingObject === ScoringObject.specimen">Specimen Scored: {{team?.leftSpecimenScored??"None"}} </p>
 
-<p>Average Auto Score: {{team?.autoScore}}</p>
+<p>Samples Scored in Net Zone: {{team?.leftSamplesScoredNetZone??"None"}} </p>
 
-<p>Additional Auto Notes: {{team?.autoNotes}}</p>
+<p>Samples Scored in Low Basket: {{team?.leftSamplesScoredLowBasket??"None"}} </p>
+
+<p>Samples Scored in High Basket: {{team?.leftSamplesScoredHighBasket??"None"}} </p>
+
+<p>Park/Ascent: {{team?.leftAutoScore}}</p>
+
+<p>Average Auto Score: {{team?.leftAutoScore}}</p>
+
+<p>Additional Auto Notes: {{team?.leftAutoNotes}}</p>
+
+
+<br />
+<h2>Auto Right</h2>
+
+<p>Starting Object: {{team?.rightStartingObject??"None"}} </p>
+
+<p *ngIf="team?.rightStartingObject === ScoringObject.specimen">Specimen Scored: {{team?.rightSpecimenScored??"None"}} </p>
+
+<p>Samples Scored in Net Zone: {{team?.rightSamplesScoredNetZone??"None"}} </p>
+
+<p>Samples Scored in Low Basket: {{team?.rightSamplesScoredLowBasket??"None"}} </p>
+
+<p>Samples Scored in High Basket: {{team?.rightSamplesScoredHighBasket??"None"}} </p>
+
+<p>Park/Ascent: {{team?.rightAutoScore}}</p>
+
+<p>Average Auto Score: {{team?.rightAutoScore}}</p>
+
+<p>Additional Auto Notes: {{team?.rightAutoNotes}}</p>
 
 
 <br /><br />
 <h2>Teleop</h2>
 
-<p>Average Mosaics Scored: {{team?.mosaicsScored}}</p>
+<p>Scoring Preference: {{team?.scoringPreference}}</p>
 
-<p>Average Set Lines Reached: {{team?.setLinesReached}}</p>
+<p>Time to Score Sample: {{team?.timeToScoreSample}}</p>
 
-<p>Average Pixels Scored: {{team?.pixelsScored}}</p>
+<p>Time to Score Specimen: {{team?.timeToScoreSpecimen}}</p>
 
-<p>Average TeleOp Score: {{team?.teleOpScore}}</p>
+<p>Average TeleOp Score: {{team?.teleopScore}}</p>
 
 <p>Additional Teleop Notes: {{team?.teleopNotes}}</p>
 
@@ -57,11 +90,17 @@
 <br /><br />
 <h2>End Game</h2>
 
-<p>Can Hang: {{team?.canHang}}</p>
+<p>Can Level One Ascent: {{team?.canLevelOneAscent}}</p>
 
-<p>Time to Hang: {{team?.hangTime}}</p>
+<p *ngIf="team?.canLevelOneAscent">Level One Ascent Time: {{team?.levelOneAscentTime}}</p>
 
-<p>Average Drone Score: {{team?.droneScore}}</p>
+<p>Can Level Two Ascent: {{team?.canLevelTwoAscent}}</p>
+
+<p *ngIf="team?.canLevelTwoAscent">Level Two Ascent Time: {{team?.levelTwoAscentTime}}</p>
+
+<p>Can Level Three Ascent: {{team?.canLevelThreeAscent}}</p>
+
+<p *ngIf="team?.canLevelThreeAscent">Level Three Ascent Time: {{team?.levelThreeAscentTime}}</p>
 
 <p>Average End-Game Score: {{team?.endGameScore}}</p>
 

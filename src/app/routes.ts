@@ -5,6 +5,7 @@ import { AddTeamComponent } from './add-team/add-team.component';
 import { EditTeamComponent } from './edit-team/edit-team.component';
 import { AboutComponent } from './about/about.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
+import { ImportTeamsComponent } from './import-teams/import-teams.component';
 
 const routeConfig: Routes = [
   {
@@ -20,12 +21,12 @@ const routeConfig: Routes = [
   {
     path: 'add-team',
     component: AddTeamComponent,
-    title: 'AddTeam',
+    title: 'Add Team',
   },
   {
     path: 'team/:id/edit',
     component: EditTeamComponent,
-    title: 'EditTeam',
+    title: 'Edit Team',
   },
   {
     path: 'about',
@@ -36,6 +37,11 @@ const routeConfig: Routes = [
     path: 'suggestions',
     component: SuggestionsComponent,
     title: 'Suggestions',
+  },
+  {
+    path: 'import',
+    component: ImportTeamsComponent,
+    title: 'Import',
   },
 ];
 export default routeConfig;

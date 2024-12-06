@@ -1,0 +1,17 @@
+<div>
+    <h3>Import/Export</h3>
+    <p>We store team data as json strings, meaning you can copy and paste data to and from this website.<br /> We recommend you regularly export and backup as any time you clear your browser data it will delete anything saved here.</p>
+    <br />
+    <div class="container">
+        <div class="row">
+            <div style="text-align: center;" class="col">
+                <textarea readonly="true" [ngModel]="exportText"></textarea> <br />
+                <button (click)="exportData()">export</button>
+            </div>
+            <div style="text-align: center;" class="col">
+                <textarea [(ngModel)]="importText"></textarea> <br />
+                <button (click)="importData()">import</button>
+            </div>
+        </div>
+    </div>
+</div>

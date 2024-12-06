@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TeamRepoService } from '../team-repo.service';
 import { ActivatedRoute } from '@angular/router';
-import { Team, PixelPlacement, ObjectDetectionToString, ObjectDetection } from '../team';
+import { Team, ScoringObject, ScoringObjectToString, ScoringMethod, LowMedHigh } from '../IntoTheDeepTeam';
 import { NgIf } from '@angular/common';
 
 @Component({
@@ -15,8 +15,9 @@ import { NgIf } from '@angular/common';
 export class EditTeamComponent {
   
   team?: Team = undefined;
-  public ObjectDetection = ObjectDetection;
-  public PixelPlacement = PixelPlacement;
+  public ScoringObject = ScoringObject;
+  public ScoringMethod = ScoringMethod;
+  public LowMedHigh = LowMedHigh;
   
   constructor(private teamRepo: TeamRepoService, private route: ActivatedRoute) {
     route.params.subscribe(val => {
@@ -27,11 +28,11 @@ export class EditTeamComponent {
   }
 
   onSubmit(addTeamForm: NgForm) {
-    this.teamRepo.saveTeam(this.team!)
+    this.teamRepo.saveTeam(this.team!);
   }
 
   display(x: any): string {
-    return ObjectDetectionToString[x as ObjectDetection];
+    return ScoringObjectToString[x as ScoringObject];
   }
 
 }
