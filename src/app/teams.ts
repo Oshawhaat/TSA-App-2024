@@ -1,61 +1,32 @@
-import { Team, LowMedHigh, ScoringObject, ScoringMethod, ParkingMethod } from './IntoTheDeepTeam'
+import { Team } from './decodeTeam'
 
 export const CyberPirates13737: Team = {
     // Team
     number: 13737,
     name: "Belton Cyber Pirates",
 
-    // Bot
-    driveInfo: "Basic Mecanum drive, field centric drive",
-    driveSpeed: LowMedHigh.medium,
-    armInfo: "Reverse double six bar with swing arm on the front",
-    armSpeed: LowMedHigh.medium,
-    intakeInfo: "Basic claw, angled fingers to grab the samples well",
+    driveInfo: "Fast mecanum drive-train",
+    intakeInfo: "Fast rubber-band intake",
+    launcherInfo: "Single flywheel, takes a second to get to speed",
+    hasSorter: false,
+    sorterInfo: "",
 
-    // Scoring
-    canScoreLowBar: false,
-    canScoreHighBar: false,
-    canScoreLowBasket: true,
-    canScoreHighBasket: true,
-    
-    // Auto
-    leftStartingObject: ScoringObject.specimen,
-    leftSpecimenScored: 1,
-    leftSamplesScoredNetZone: 1,
-    leftSamplesScoredLowBasket: 0,
-    leftSamplesScoredHighBasket: 0,
-    //leftParkingMethod: ,
-    leftAutoScore: 36,
-    leftAutoNotes: "Scores specimen on high bar first, then grabs first yellow block and scores in high basket. End in net zone.",
-    leftAutoParkAscent: false,
+    closeAutoArtifacts: 3,
+    closeAutoScore: 11,
+    closeAutoNotes: "On average scores ~2.66 artifacts",
 
-    // Auto Right
-    rightStartingObject: ScoringObject.specimen,
-    rightSpecimenScored: 2,
-    rightSamplesScoredNetZone: 0,
-    rightSamplesScoredLowBasket: 0,
-    rightSamplesScoredHighBasket: 0,
-    //rightParkingMethod?: ,
-    rightAutoScore: 40,
-    rightAutoNotes: "Scores first specimen on high bar then pushes first blue block into human player, then grabs specimen and scores on high bar",
-    rightAutoParkAscent: false,
+    farAutoArtifacts: 0,
+    farAutoScore: 0,
+    farAutoNotes: "None",
 
-    // Teleop
-    scoringPreference: ScoringMethod.highBar,
-    timeToScoreSample: 10,
-    //timeToScoreSpecimen?: ,
-    teleopScore: 40,
-    teleopNotes: "Somewhat difficult to grab specimen with their bot but they are good at it",
-    // End game
-    canLevelOneAscent: true,
-    levelOneAscentTime: 3,
-    canLevelTwoAscent: false,
-    //levelTwoAscentTime?: ,
-    canLevelThreeAscent: false,
-    //levelThreeAscentTime?: ,
-    endGameScore: 3,
-    endGameNotes: "Keep scoring until 3-5 seconds left then touch bar for level 1 ascent",
+    artifactsScored: 18,
+    cycleTime: 15,
+    teleOpScore: 54,
+    teleopNotes: "Sometimes miss one of the balls due to flywheel funkiness",
 
-    // Overall
-    averageScore: 80,
+    endGameStrategy: "Score until final few moments, then either fully be in the square or touch for the points",
+    endGameScore: 10,
+    endGameNotes: "",
+
+    averageScore: 70,
 }

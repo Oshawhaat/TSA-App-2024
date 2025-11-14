@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Team, ScoringObject, ScoringMethod } from '../IntoTheDeepTeam';
+import { Team } from '../decodeTeam';
 import { TeamRepoService } from '../team-repo.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { NgIf } from '@angular/common';
@@ -16,11 +16,8 @@ export class DisplayTeamComponent implements OnInit {
   team?: Team = undefined;
   teamNumber: number = 0;
   
-  get ScoringObject() {return ScoringObject}
-  get ScoringMethod() {return ScoringMethod}
-  
   constructor(private teamRepo: TeamRepoService, private route: ActivatedRoute) {
-    route.params.subscribe(val => {
+    route.params.subscribe(() => {
       this.teamNumber = Number(this.route.snapshot.params['id']);
       this.team = this.teamRepo.getTeam(this.teamNumber);
     });

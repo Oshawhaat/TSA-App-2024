@@ -6,7 +6,6 @@
         <p>Team Name: </p>
         <input type="text" name="teamName" [(ngModel)]="team.name" />
 
-
         <br /><br />
         <h2>Robot Info</h2>
 
@@ -15,150 +14,69 @@
 
         <br /> <br />
 
-        <p>Drive Speed: </p>
-        <select name="driveSpeed" [(ngModel)]="team.driveSpeed">
-            <option [value]="LowMedHigh.low">Low</option>
-            <option [value]="LowMedHigh.medium">Medium</option>
-            <option [value]="LowMedHigh.high">High</option>
-        </select>
-
-        <br /> <br />
-
-        <p>Arm Info: </p>
-        <input type="text" name="armInfo" [(ngModel)]="team.armInfo" />
-
-        <br /> <br />
-
-        <p>Arm Speed: </p>
-        <select name="armSpeed" [(ngModel)]="team.armSpeed">
-            <option [value]="LowMedHigh.low">Low</option>
-            <option [value]="LowMedHigh.medium">Medium</option>
-            <option [value]="LowMedHigh.high">High</option>
-            <option>None</option>
-        </select>
-
-        <br /> <br />
-
         <p>Intake Info: </p>
         <input type="text" name="intakeInfo" [(ngModel)]="team.intakeInfo" />
 
         <br /> <br />
 
-
-        <br /><br />
-        <h2>Scoring</h2>
-
-        <p>Low Basket: </p>
-        <input type="checkbox" name="lowBasket" [(ngModel)]="team.canScoreLowBasket" />
+        <p>Launcher Info: </p>
+        <input type="text" name="launcherInfo" [(ngModel)]="team.launcherInfo" />
 
         <br /> <br />
 
-        <p>High Basket: </p>
-        <input type="checkbox" name="highBasket" [(ngModel)]="team.canScoreHighBasket" />
+        <p>Launcher Info: </p>
+        <input type="checkbox" name="hasSorter" [(ngModel)]="team.hasSorter" />
 
         <br /> <br />
 
-        <p>Low Bar: </p>
-        <input type="checkbox" name="lowBar" [(ngModel)]="team.canScoreLowBar" />
-
-        <br /> <br />
-
-        <p>High Bar: </p>
-        <input type="checkbox" name="highBar" [(ngModel)]="team.canScoreHighBar" />
+        <p>Sorter Info: </p>
+        <input type="text" name="sorterInfo" [(ngModel)]="team.sorterInfo" />
 
         <br /> <br />
 
 
         <br /><br />
-        <h2>Auto Left</h2>
+        <h2>Close Auto</h2>
 
-        <p>Starting Object: </p>
-        <select name="startingObject" [(ngModel)]="team.leftStartingObject">
-            <option [value]="ScoringObject.sample">Sample</option>
-            <option [value]="ScoringObject.specimen">Specimen</option>
-            <option>None</option>
-        </select>
+        <p>Artifacts Scored: </p>
+        <input type="number" name="artifactsScored" [(ngModel)]="team.closeAutoArtifacts" />
 
         <br /> <br />
 
-        <p>Specimen Scored: </p>
-        <input type="number" name="specimenScored" [(ngModel)]="team.leftSpecimenScored" />
-
-        <br /> <br />
-
-        <p>Samples Scored in Net Zone: </p>
-        <input type="number" name="samplesScoredNetZone" [(ngModel)]="team.leftSamplesScoredNetZone" />
-
-        <br /> <br />
-
-        <p>Samples Scored in Low Basket: </p>
-        <input type="number" name="samplesScoredLowBasket" [(ngModel)]="team.leftSamplesScoredLowBasket" />
-
-        <br /> <br />
-
-        <p>Samples Scored in High Basket: </p>
-        <input type="number" name="samplesScoredHighBasket" [(ngModel)]="team.leftSamplesScoredHighBasket" />
-
-        <br /> <br />
-
-        <p>Park/Ascent: </p>
-        <input type="checkbox" name="autoParkAscent" [(ngModel)]="team.leftAutoParkAscent" />
+        <p>Leave: </p>
+        <input type="checkbox" name="leave" [(ngModel)]="team.closeAutoLeave" />
 
         <br /> <br />
 
         <p>Average Auto Score: </p>
-        <input type="number" name="autoScore" [(ngModel)]="team.leftAutoScore" />
+        <input type="number" name="autoScore" [(ngModel)]="team.closeAutoScore" />
 
         <br /> <br />
 
         <p>Additional Auto Notes: </p>
-        <input type="text" name="autoNotes" [(ngModel)]="team.leftAutoNotes" />
+        <input type="text" name="autoNotes" [(ngModel)]="team.closeAutoNotes" />
 
         <br /> <br />
 
-        <h2>Auto Right</h2>
+        <h2>Far Auto</h2>
 
-        <p>Starting Object: </p>
-        <select name="startingObject" [(ngModel)]="team.rightStartingObject">
-            <option [value]="ScoringObject.sample">Sample</option>
-            <option [value]="ScoringObject.specimen">Specimen</option>
-            <option>None</option>
-        </select>
+        <p>Artifacts Scored: </p>
+        <input type="number" name="artifactsScored" [(ngModel)]="team.closfarAutoArtifacts" />
 
         <br /> <br />
 
-        <p>Specimen Scored: </p>
-        <input type="number" name="specimenScored" [(ngModel)]="team.rightSpecimenScored" />
-
-        <br /> <br />
-
-        <p>Samples Scored in Net Zone: </p>
-        <input type="number" name="samplesScoredNetZone" [(ngModel)]="team.rightSamplesScoredNetZone" />
-
-        <br /> <br />
-
-        <p>Samples Scored in Low Basket: </p>
-        <input type="number" name="samplesScoredLowBasket" [(ngModel)]="team.rightSamplesScoredLowBasket" />
-
-        <br /> <br />
-
-        <p>Samples Scored in High Basket: </p>
-        <input type="number" name="samplesScoredHighBasket" [(ngModel)]="team.rightSamplesScoredHighBasket" />
-
-        <br /> <br />
-
-        <p>Park/Ascent: </p>
-        <input type="checkbox" name="autoParkAscent" [(ngModel)]="team.rightAutoParkAscent" />
+        <p>Leave: </p>
+        <input type="checkbox" name="leave" [(ngModel)]="team.farAutoLeave" />
 
         <br /> <br />
 
         <p>Average Auto Score: </p>
-        <input type="number" name="autoScore" [(ngModel)]="team.rightAutoScore" />
+        <input type="number" name="autoScore" [(ngModel)]="team.farAutoScore" />
 
         <br /> <br />
 
         <p>Additional Auto Notes: </p>
-        <input type="text" name="autoNotes" [(ngModel)]="team.rightAutoNotes" />
+        <input type="text" name="autoNotes" [(ngModel)]="team.farAutoNotes" />
 
         <br /> <br />
 
@@ -166,18 +84,13 @@
         <br /><br />
         <h2>Teleop</h2>
 
-        <p>Preferred Method of Scoring: </p>
-        <input type="ScoringMethod" name="scoringPreference" [(ngModel)]="team.scoringPreference" />
+        <p>Artifacts Scored: </p>
+        <input type="number" name="artifactsScored" [(ngModel)]="team.artifactsScored" />
 
         <br /> <br />
 
-        <p>Time to Score Samples: </p>
-        <input type="number" name="timeToScoreSample" [(ngModel)]="team.timeToScoreSample" />
-
-        <br /> <br />
-
-        <p>Time to Score Specimen: </p>
-        <input type="number" name="timeToScoreSpecimen" [(ngModel)]="team.timeToScoreSpecimen" />
+        <p>Cycle Time: </p>
+        <input type="number" name="cycleTime" [(ngModel)]="team.cycleTime" />
 
         <br /> <br />
 
@@ -193,33 +106,8 @@
         <br /> <br />
         <h2>End Game</h2>
 
-        <p>Level One Ascent: </p>
-        <input type="checkbox" name="canLevelOneAscent" [(ngModel)]="team.canLevelOneAscent" />
-
-        <br /> <br />
-
-        <p>Time to Level One Ascent: </p>
-        <input type="number" name="timeLevelOneAscent" [(ngModel)]="team.levelOneAscentTime" />
-
-        <br /> <br />
-
-        <p>Level Two Ascent: </p>
-        <input type="checkbox" name="canLevelTwoAscent" [(ngModel)]="team.canLevelTwoAscent" />
-
-        <br /> <br />
-
-        <p>Time to Level Two Ascent: </p>
-        <input type="number" name="timeLevelTwoAscent" [(ngModel)]="team.levelTwoAscentTime" />
-
-        <br /> <br />
-
-        <p>Level Three Ascent: </p>
-        <input type="checkbox" name="canLevelThreeAscent" [(ngModel)]="team.canLevelThreeAscent" />
-
-        <br /> <br />
-
-        <p>Time to Level Three Ascent: </p>
-        <input type="number" name="timeLevelThreeAscent" [(ngModel)]="team.levelThreeAscentTime" />
+        <p>End-Game + Parking Strategy: </p>
+        <input type="text" name="endGameStrategy" [(ngModel)]="team.endGameStrategy" />
 
         <br /> <br />
 
@@ -229,7 +117,7 @@
         <br /> <br />
 
         <p>Additional End Game Notes: </p>
-        <input type="text" name="teleopNotes" [(ngModel)]="team.endGameNotes" />
+        <input type="text" name="endGameNotes" [(ngModel)]="team.endGameNotes" />
 
 
         <br /> <br />

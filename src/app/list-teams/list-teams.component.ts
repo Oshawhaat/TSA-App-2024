@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TeamRepoService } from '../team-repo.service';
-import { Team } from '../IntoTheDeepTeam';
+import { Team } from '../decodeTeam';
 import { OrderByPipe } from "../order-by.pipe";
 import { RouterModule } from '@angular/router';
 
@@ -17,36 +17,26 @@ export class ListTeamsComponent implements OnInit {
 
   teams: Team[] = [];
   teamKeys: string[] = [
-    'driveSpeed',
-    'armSpeed',
+    'driveInfo',
+    'intakeInfo',
+    'launcherInfo',
+    'hasSorter',
+    'sorterInfo',
 
-    // Scoring
-    'canScoreLowBar',
-    'canScoreHighBar',
-    'canScoreLowBasket',
-    'canScoreHighBasket',
-    
-    // Auto
-    'startingObject',
-    'specimenScored',
-    'samplesScoredNetZone',
-    'samplesScoredLowBasket',
-    'samplesScoredHighBasket',
-    'parkingMethod',
+    'autoArtifacts',
+    'autoScore',
+    'autoNotes',
 
-    // Teleop
-    'scoringPreference',
-    'timeToScoreSample',
-    'timeToScoreSpecimen',
-    'teleopScore',
+    'artifactsScored',
+    'cycleTime',
+    'teleOpScore',
+    'teleopNotes',
 
-    // End game
-    'canLevelOneAscent',
-    'levelOneAscentTime',
-    'canLevelTwoAscent',
-    'levelTwoAscentTime',
-    'canLevelThreeAscent',
-    'levelThreeAscentTime',
+    'endGameStrategy',
+    'endGameScore',
+    'endGameNotes',
+
+    'averageScore',
   ];
   selectedTeamKey: string = '';
   sortCollumn: string = "number";

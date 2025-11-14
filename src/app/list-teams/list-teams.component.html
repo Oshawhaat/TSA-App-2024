@@ -27,7 +27,7 @@
                 {{ team.averageScore }}
             </td>
             <td>
-                {{ team.autoScore }}
+                {{ (team.closeAutoScore + team.farAutoScore) / 2 }}
             </td>
             <td>
                 {{ team[selectedTeamKey] }}
