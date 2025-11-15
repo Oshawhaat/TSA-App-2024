@@ -5,11 +5,10 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-display-team',
-  standalone: true,
-  imports: [RouterModule, NgIf],
-  templateUrl: './display-team.component.html',
-  styleUrl: './display-team.component.css'
+    selector: 'app-display-team',
+    imports: [RouterModule, NgIf],
+    templateUrl: './display-team.component.html',
+    styleUrl: './display-team.component.css'
 })
 export class DisplayTeamComponent implements OnInit {
   

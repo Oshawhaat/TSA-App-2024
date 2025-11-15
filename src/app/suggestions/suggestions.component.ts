@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-suggestions',
-    standalone: true,
     templateUrl: './suggestions.component.html',
     styleUrl: './suggestions.component.css',
     imports: [NgFor, CommonModule, OrderByPipe, RouterModule]

@@ -8,7 +8,6 @@ import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-list-teams',
-    standalone: true,
     templateUrl: './list-teams.component.html',
     styleUrl: './list-teams.component.css',
     imports: [NgFor, OrderByPipe, RouterModule, CommonModule, FormsModule]

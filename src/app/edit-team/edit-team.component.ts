@@ -6,11 +6,10 @@ import { Team } from '../decodeTeam';
 import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-edit-team',
-  standalone: true,
-  imports: [FormsModule, NgIf],
-  templateUrl: './edit-team.component.html',
-  styleUrl: './edit-team.component.css'
+    selector: 'app-edit-team',
+    imports: [FormsModule, NgIf],
+    templateUrl: './edit-team.component.html',
+    styleUrl: './edit-team.component.css'
 })
 export class EditTeamComponent {
   

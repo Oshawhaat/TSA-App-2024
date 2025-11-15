@@ -4,11 +4,10 @@ import { TeamRepoService } from '../team-repo.service';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-add-team',
-  standalone: true,
-  imports: [FormsModule],
-  templateUrl: './add-team.component.html',
-  styleUrl: './add-team.component.css'
+    selector: 'app-add-team',
+    imports: [FormsModule],
+    templateUrl: './add-team.component.html',
+    styleUrl: './add-team.component.css'
 })
 export class AddTeamComponent {
 

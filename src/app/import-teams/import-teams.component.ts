@@ -5,11 +5,10 @@ import { TeamRepoService } from '../team-repo.service';
 import { Team } from '../IntoTheDeepTeam';
 
 @Component({
-  selector: 'app-import-teams',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './import-teams.component.html',
-  styleUrl: './import-teams.component.css'
+    selector: 'app-import-teams',
+    imports: [CommonModule, FormsModule],
+    templateUrl: './import-teams.component.html',
+    styleUrl: './import-teams.component.css'
 })
 export class ImportTeamsComponent {
   exportText: string = "";
