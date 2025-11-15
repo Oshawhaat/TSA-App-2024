@@ -21,7 +21,7 @@ export const CyberPirates13737: Team = {
 
     artifactsScored: 18,
     cycleTime: 15,
-    teleOpScore: 54,
+    teleopScore: 54,
     teleopNotes: "Sometimes miss one of the balls due to flywheel funkiness",
 
     endGameStrategy: "Score until final few moments, then either fully be in the square or touch for the points",

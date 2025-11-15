@@ -20,7 +20,7 @@ export interface Team {
 
     artifactsScored?: number;
     cycleTime?: number;
-    teleOpScore?: number;
+    teleopScore?: number;
     teleopNotes?: string;
 
     endGameStrategy?: string;
